@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "neoforge:conditions": [
+    {
+      "type": "cucumber:feature_flag",
+      "flag": "extendedcrafting:compressor"
+    }
+  ],
+  "pattern": [
+    "CBC",
+    "BIB",
+    "DSD"
+  ],
+  "key": {
+    "I": {
+      "item": "extendedcrafting:compressor"
+    },
+    "B": {
+      "item": "extendedcrafting:ultimate_component"
+    },
+    "S": {
+      "item": "extendedcrafting:ultimate_auto_table"
+    },
+    "C": {
+      "item": "extendedcrafting:enhanced_ender_catalyst"
+    },
+    "D": {
+      "item": "extendedcrafting:enhanced_redstone_catalyst"
+    }
+  },
+  "result": {
+    "id": "extendedcompressor:extended_compressor"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "required": false,
+  "package": "icu.kudikan.extendedcompressor.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "EjectModeSwitchPayloadMixin",
+    "JadeCompatMixin",
+    "JeiCompatMixin",
+    "SingularityRegistryMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}
