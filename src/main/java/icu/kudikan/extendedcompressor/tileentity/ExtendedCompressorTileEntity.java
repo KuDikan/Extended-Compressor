@@ -11,6 +11,7 @@ import com.blakebr0.extendedcrafting.api.crafting.ICompressorRecipe;
 import com.blakebr0.extendedcrafting.config.ModConfigs;
 import com.blakebr0.extendedcrafting.init.ModRecipeTypes;
 import com.google.common.primitives.Ints;
+import icu.kudikan.extendedcompressor.Config;
 import icu.kudikan.extendedcompressor.contanier.ExtendedCompressorContainer;
 import icu.kudikan.extendedcompressor.init.ModTileEntities;
 import icu.kudikan.extendedcompressor.inventory.UnlimitItemStackHandler;
@@ -34,6 +35,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ExtendedCompressorTileEntity extends BaseInventoryTileEntity implements MenuProvider {
+    private static final int POWER_CAPACITY = (int) Math.clamp(ModConfigs.COMPRESSOR_POWER_CAPACITY.get() * Config.INSTANCE.extendedCompressorPowerCapMultiplier.getAsDouble(), 1, Integer.MAX_VALUE);
+    private static final double POWER_RATE_MULTIPLIER = Config.INSTANCE.extendedCompressorPowerRateMultiplier.getAsDouble();
     private final BaseItemStackHandler inventory;
     private final BaseItemStackHandler recipeInventory;
     private final BaseEnergyStorage energy;
@@ -43,13 +46,12 @@ public class ExtendedCompressorTileEntity extends BaseInventoryTileEntity implem
     private long materialCount;
     private int progress;
     private boolean ejecting = false;
-//    private final boolean inputLimit = false;
 
     public ExtendedCompressorTileEntity(BlockPos pos, BlockState state) {
         super(ModTileEntities.EXTENDED_COMPRESSOR.get(), pos, state);
         this.inventory = createInventoryHandler((slot) -> this.setChanged());
         this.recipeInventory = BaseItemStackHandler.create(2);
-        this.energy = new BaseEnergyStorage(Ints.saturatedCast(ModConfigs.COMPRESSOR_POWER_CAPACITY.get() * 4), this::setChangedFast);
+        this.energy = new BaseEnergyStorage(POWER_CAPACITY, this::setChangedFast);
         this.recipe = new CachedRecipe<>(ModRecipeTypes.COMPRESSOR.get());
     }
 
@@ -278,13 +280,12 @@ public class ExtendedCompressorTileEntity extends BaseInventoryTileEntity implem
     }
 
     private void process(ICompressorRecipe recipe) {
-        int extract = Ints.saturatedCast(recipe.getPowerRate() * 2L);
+        int extract = (int) Math.clamp(recipe.getPowerRate() * POWER_RATE_MULTIPLIER, 1, Integer.MAX_VALUE);
         int difference = recipe.getPowerCost() - this.progress;
         if (difference < extract)
             extract = difference;
 
         int extracted = this.energy.extractEnergy(extract, false);
-        this.energy.extractEnergy(extract, false);
         this.progress += extracted;
     }
 

@@ -13,7 +13,7 @@ import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 @Mod(value = ExtendedCompressor.MODID, dist = Dist.CLIENT)
 public class ExtendedCompressorClient {
     public ExtendedCompressorClient(IEventBus modEventBus, ModContainer container) {
-        container.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
+//        container.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
         modEventBus.register(new ModMenuScreens());
         modEventBus.register(new ModTESRs());
     }
