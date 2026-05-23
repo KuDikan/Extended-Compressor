@@ -17,7 +17,7 @@ import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import org.slf4j.Logger;
 
 @Mod(ExtendedCompressor.MODID)
-@EventBusSubscriber(modid = ExtendedCompressor.MODID)
+@EventBusSubscriber(modid = ExtendedCompressor.MODID, bus = EventBusSubscriber.Bus.MOD)
 public class ExtendedCompressor {
     public static final String MODID = "extendedcompressor";
     public static final Logger LOGGER = LogUtils.getLogger();
