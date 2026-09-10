@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "extendedcompressor:extended_compressor"
+    "extendedcompressor:extended_compressor",
+    "extendedcompressor:ultimate_compressor"
   ]
 }

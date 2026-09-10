@@ -1,5 +1,10 @@
 {
   "block.extendedcompressor.extended_compressor": "Extended Quantum Compressor",
   "container.extendedcompressor.extended_compressor": "Extended Quantum Compressor",
-  "singularity.extendedcrafting.compressor": "Quantum Compressor"
+  "block.extendedcompressor.ultimate_compressor": "Ultimate Compressor",
+  "container.extendedcompressor.ultimate_compressor": "Ultimate Compressor",
+  "singularity.extendedcrafting.compressor": "Quantum Compressor",
+  "tooltip.extendedcompressor.extended_compressor": "§7Larger Input Capacity",
+  "tooltip.extendedcompressor.ultimate_compressor": "§7Faster Batch Processing",
+  "text.extendedcompressor.too_many_item_entity_drops": "Can't break the %s as it would cause too many (%s) item entities to drop from it\nBreak it while sneaking to skip this check"
 }

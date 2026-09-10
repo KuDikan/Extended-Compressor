@@ -15,6 +15,7 @@ public class Config {
 
     public ModConfigSpec.DoubleValue extendedCompressorPowerCapMultiplier;
     public ModConfigSpec.DoubleValue extendedCompressorPowerRateMultiplier;
+    public ModConfigSpec.IntValue extendedCompressorBreakProtectionThreshold;
 
     private Config(ConfigBuilder builder) {
         builder.pushSection("ExtendedQuantumCompression", "Settings for the Extended Quantum Compressor.");
@@ -31,6 +32,11 @@ public class Config {
                         "Multiplier for the default FE/t consumption rate of the Extended Quantum Compressor relative to the Quantum Compressor."
                 ).gameRestart()
                 .defineInRange("powerRateMultiplier", 2D, 0D, Integer.MAX_VALUE);
+        extendedCompressorBreakProtectionThreshold = builder.start(
+                "breakProtectionThreshold",
+                "Break Protection Item Threshold",
+                "Minimum stored item count before breaking a Extended Compressor requires sneaking to confirm."
+        ).defineInRange("breakProtectionThreshold", 4000, 1, Integer.MAX_VALUE);
         builder.popSection();
     }
 }

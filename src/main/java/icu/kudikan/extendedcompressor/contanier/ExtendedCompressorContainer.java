@@ -5,6 +5,7 @@ import com.blakebr0.cucumber.inventory.BaseItemStackHandler;
 import com.blakebr0.cucumber.inventory.slot.BaseItemStackHandlerSlot;
 import com.blakebr0.cucumber.inventory.slot.OutputSlot;
 import com.blakebr0.extendedcrafting.container.slot.CatalystSlot;
+import com.google.common.primitives.Ints;
 import icu.kudikan.extendedcompressor.init.ModMenuTypes;
 import icu.kudikan.extendedcompressor.tileentity.ExtendedCompressorTileEntity;
 import net.minecraft.core.BlockPos;
@@ -63,7 +64,7 @@ public class ExtendedCompressorContainer extends BaseContainerMenu {
                 slot.onQuickCraft(itemstack1, itemstack);
             } else {
                 ItemStack inputStack = this.slots.get(1).getItem();
-                if (inputStack.isEmpty() || (inputStack.is(itemstack1.getItem()) && inputStack.getCount() < inputStack.getMaxStackSize() * 16777216)) {
+                if (inputStack.isEmpty() || (inputStack.is(itemstack1.getItem()) && inputStack.getCount() < Ints.saturatedCast(inputStack.getMaxStackSize() * 16777216L))) {
                     if (!this.moveItemStackTo(itemstack1, 1, 2, false)) {
                         return ItemStack.EMPTY;
                     }

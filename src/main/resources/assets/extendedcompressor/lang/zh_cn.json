@@ -1,5 +1,10 @@
 {
   "block.extendedcompressor.extended_compressor": "扩展量子压缩机",
   "container.extendedcompressor.extended_compressor": "扩展量子压缩机",
-  "singularity.extendedcrafting.compressor": "量子压缩机"
+  "block.extendedcompressor.ultimate_compressor": "终极压缩机",
+  "container.extendedcompressor.ultimate_compressor": "终极压缩机",
+  "singularity.extendedcrafting.compressor": "量子压缩机",
+  "tooltip.extendedcompressor.extended_compressor": "§7咱的输入槽就是大",
+  "tooltip.extendedcompressor.ultimate_compressor": "§7咱的批处理速度就是快",
+  "text.extendedcompressor.too_many_item_entity_drops": "无法破坏该%s，将会导致过多（%s）掉落物实体从中掉落\n按住Shift进行破坏来跳过此项检查"
 }

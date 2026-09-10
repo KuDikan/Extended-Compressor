@@ -12,5 +12,9 @@ public final class RegisterCapabilityHandler {
         event.registerBlockEntity(Capabilities.EnergyStorage.BLOCK, ModTileEntities.EXTENDED_COMPRESSOR.get(), (block, direction) -> block.getEnergy());
 
         event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, ModTileEntities.EXTENDED_COMPRESSOR.get(), (block, direction) -> block.getInventory());
+
+        event.registerBlockEntity(Capabilities.EnergyStorage.BLOCK, ModTileEntities.ULTIMATE_COMPRESSOR.get(), (block, direction) -> block.getEnergy());
+
+        event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, ModTileEntities.ULTIMATE_COMPRESSOR.get(), (block, direction) -> block.getInventory());
     }
 }

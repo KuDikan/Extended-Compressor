@@ -36,6 +36,7 @@ public class ExtendedCompressor {
     public static void onCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTab() == ModCreativeModeTabs.CREATIVE_TAB.get()) {
             event.accept(ModBlocks.EXTENDED_COMPRESSOR.get());
+            event.accept(ModBlocks.ULTIMATE_COMPRESSOR.get());
         }
     }
 }

@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "neoforge:conditions": [
+    {
+      "type": "cucumber:feature_flag",
+      "flag": "extendedcrafting:compressor"
+    }
+  ],
+  "pattern": [
+    "CUC",
+    "UIU",
+    "BAB"
+  ],
+  "key": {
+    "I": {
+      "item": "extendedcompressor:extended_compressor"
+    },
+    "U": {
+      "item": "extendedcrafting:the_ultimate_component"
+    },
+    "B": {
+      "item": "extendedcrafting:the_ultimate_block"
+    },
+    "C": {
+      "item": "extendedcrafting:the_ultimate_catalyst"
+    },
+    "A": {
+      "item": "extendedcrafting:ultimate_auto_table"
+    }
+  },
+  "result": {
+    "id": "extendedcompressor:ultimate_compressor"
+  }
+}

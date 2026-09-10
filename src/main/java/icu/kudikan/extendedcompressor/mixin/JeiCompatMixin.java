@@ -20,6 +20,7 @@ public class JeiCompatMixin {
     public void registerRecipeCatalysts(IRecipeCatalystRegistration registration, CallbackInfo ci) {
         if (ModConfigs.ENABLE_COMPRESSOR.get()) {
             registration.addRecipeCatalyst(new ItemStack(ModBlocks.EXTENDED_COMPRESSOR.get()), CompressorCraftingCategory.RECIPE_TYPE);
+            registration.addRecipeCatalyst(new ItemStack(ModBlocks.ULTIMATE_COMPRESSOR.get()), CompressorCraftingCategory.RECIPE_TYPE);
         }
     }
 

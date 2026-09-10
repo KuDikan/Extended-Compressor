@@ -10,5 +10,6 @@ public final class ModTESRs {
     @SubscribeEvent
     public void onRegisterBlockEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
         event.registerBlockEntityRenderer(ModTileEntities.EXTENDED_COMPRESSOR.get(), ExtendedCompressorRenderer::new);
+        event.registerBlockEntityRenderer(ModTileEntities.ULTIMATE_COMPRESSOR.get(), ExtendedCompressorRenderer::new);
     }
 }

@@ -6,7 +6,7 @@ license = "${mod_license}"
 modId = "${mod_id}"
 version = "${mod_version}"
 displayName = "${mod_name}"
-displayURL="https://legacy.curseforge.com/minecraft/mc-mods/extended-compressor"
+displayURL = "https://legacy.curseforge.com/minecraft/mc-mods/extended-compressor"
 authors = "KuDikan"
 description = '''
 Extend Extended Crafting with Extended Compressor!

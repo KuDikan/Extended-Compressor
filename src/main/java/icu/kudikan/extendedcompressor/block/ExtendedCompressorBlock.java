@@ -5,6 +5,7 @@ import com.blakebr0.cucumber.helper.BlockHelper;
 import icu.kudikan.extendedcompressor.init.ModTileEntities;
 import icu.kudikan.extendedcompressor.tileentity.ExtendedCompressorTileEntity;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.NonNullList;
 import net.minecraft.world.Containers;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.ItemInteractionResult;
@@ -91,6 +92,6 @@ public class ExtendedCompressorBlock extends BaseTileEntityBlock {
 
     @Override
     protected <T extends BlockEntity> BlockEntityTicker<T> getServerTicker(Level level, BlockState state, BlockEntityType<T> type) {
-        return createTicker(type, ModTileEntities.EXTENDED_COMPRESSOR.get(), ExtendedCompressorTileEntity::tick);
+        return createTicker(type, ModTileEntities.EXTENDED_COMPRESSOR.get(), ExtendedCompressorTileEntity::serverTick);
     }
 }

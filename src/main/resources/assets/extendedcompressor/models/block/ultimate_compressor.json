@@ -1,0 +1,12 @@
+{
+  "render_type": "minecraft:cutout_mipped",
+  "parent": "extendedcompressor:block/extended_compressor",
+  "textures": {
+    "0": "extendedcrafting:block/black_iron_block",
+    "1": "extendedcompressor:block/spectrum",
+    "2": "extendedcrafting:block/compressor_front",
+    "3": "extendedcrafting:block/compressor_top",
+    "4": "extendedcompressor:block/compressor_press",
+    "particle": "extendedcrafting:block/black_iron_block"
+  }
+}

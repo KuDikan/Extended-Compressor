@@ -11,12 +11,12 @@ import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemDisplayContext;
 
-public class ExtendedCompressorRenderer implements BlockEntityRenderer<ExtendedCompressorTileEntity> {
+public class ExtendedCompressorRenderer<T extends ExtendedCompressorTileEntity> implements BlockEntityRenderer<T> {
     public ExtendedCompressorRenderer(BlockEntityRendererProvider.Context context) {
     }
 
     @Override
-    public void render(ExtendedCompressorTileEntity tile, float v, PoseStack matrix, MultiBufferSource buffer, int i, int i1) {
+    public void render(T tile, float v, PoseStack matrix, MultiBufferSource buffer, int i, int i1) {
         if (!ModConfigs.ENABLE_COMPRESSOR_RENDERER.get())
             return;
 
